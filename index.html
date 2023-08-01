@@ -1,0 +1,63 @@
+<html>
+<script>
+function greetingsmsg()
+{
+ fn=document.form1.fname.value;
+ ln=document.form1.lname.value;
+ ele=document.getElementsByName('sex');
+
+for(i=0;i<ele.length;i++)
+{
+ if(ele[i].checked)
+  {
+   sx=ele[i].value;
+   }
+
+}
+if(sx=="Male")
+{
+alert("Hello Mr."+" "+fn+" "+ln+" How are you.");
+}
+ele1=document.getElementsByName('Maritalstatus');
+for(i=0;i<ele.length;i++)
+{
+ if(ele1[i].checked)
+  {
+   ms=ele1[i].value;
+   }
+}
+if(sx=="Female" && ms=="Married" )
+{
+alert("Hello Mrs."+" "+fn+" "+ln+" How are you.");
+}
+else if(sx=="Female" && ms=="Unmarried")
+{
+alert("Hello Miss."+" "+fn+" "+ln+" How are you.");
+}
+}
+</script>
+
+<body>
+<form name=form1>
+Enter Frist Name:-
+<input type=text  name=fname value="">
+<br><br>
+Enter Last Name:-
+<input type=text name=lname value="">
+<br><br><br><br>
+Sex:-
+<br>
+<input type=radio name="sex" value="Male">Male
+<input type=radio name="sex" value="Female">Female
+<br><br>
+Marital status:-
+<br>
+<input type=radio name="Maritalstatus" value="Married">Married
+<input type=radio name="Maritalstatus" value="Unmarried">Unmarried
+<br><br>
+
+<input type=button name=b1 value="Show Greetings Message" onclick="greetingsmsg()">
+</form>
+
+</body>
+</html>
